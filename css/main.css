@@ -1,0 +1,65 @@
+body{
+    min-height: 100vh;
+   background-color: #090c31;
+   /*para centrar la calculadora*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.Calculadora{
+  background-color: #151731;
+  color: white;
+  /*para que se ponga en vertical los botones*/
+  display: grid;
+  /*para tener columnas igual*/
+  grid-template-columns: repeat(4,1fr);
+  /*un ancho de*/
+  width: 350px;
+  /*y para que maximos tenga el ancho de la pantalla y no se hachique*/
+  max-width: 100%;
+  /*para separar un poco de los bordes*/
+  padding: 1.5rem;
+  /*para ponerle un fondo/borde*/
+  border-radius: 1rem;
+  /*para separar los botones*/
+  gap: .5rem;
+}
+.pantalla{
+    /*para el resultado de la cuenta ocupe todo el ancho */
+    grid-column: 1/5;
+    /*vamos a ponerle un fondo asi se ve bien*/
+    background-color: #090c31;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    /*para cambiar el tipo de letra*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:600;
+}
+.btn{
+    /*vamos a agregarle un fondo a los botones*/
+    background-color: #15173c;
+    /*cambiar el color del boton*/
+    color:white;
+    /*cambiar el tipo de borde que viene por defecto*/
+    border: 0;
+    padding: 1.5rem .5rem;
+    justify-content: center;
+    align-items: center;    
+    /*para agregarle al mouse la forma de manito*/
+    cursor: pointer;
+}
+/*para aplicarle un colorde fondo a los botones*/
+.btn:hover{
+    background-color: #090c31;
+}
+/*para que el cero ocupe dos columnas*/
+#cero{
+    grid-column:span 2 ;
+}
+/*para que el boton = ocupe dos columnas */
+#igual{
+    grid-row: span 2 ;
+}
